@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timaucy Support - Sistema de Chamados</title>
+  <link rel="stylesheet" href="style.css"> <!-- CSS externo -->
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Timaucy Support</h1>
+    <p>Organize seus chamados técnicos com eficiência</p>
+  </header>
+
+  <!-- Menu de navegação -->
+  <nav>
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#login">Login</a></li>
+      <li><a href="#cadastro">Cadastro</a></li>
+      <li><a href="#cliente">Painel do Cliente</a></li>
+      <li><a href="#tecnico">Painel Técnico</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section id="inicio">
+      <h2>Bem-vindo ao Sistema de Suporte Técnico</h2>
+      <p>Registre, acompanhe e gerencie seus chamados de forma simples.</p>
+      <button onclick="acessarSistema()">Acessar Sistema</button>
+    </section>
+
+    <!-- Seção de Login -->
+    <section id="login">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="loginEmail">E-mail:</label>
+        <input type="email" id="loginEmail" required>
+        <label for="loginSenha">Senha:</label>
+        <input type="password" id="loginSenha" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <!-- Seção de Cadastro -->
+    <section id="cadastro">
+      <h2>Cadastro de Usuário</h2>
+      <form id="cadastroForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+
+    <!-- Painel do Cliente -->
+    <section id="cliente">
+      <h2>Meus Chamados</h2>
+      <button onclick="abrirFormularioChamado()">Novo Chamado</button>
+      <div id="formChamado" style="display:none;">
+        <form id="chamadoForm">
+          <label for="tipo">Tipo de atendimento:</label>
+          <select id="tipo">
+            <option value="remoto">Remoto</option>
+            <option value="presencial">Presencial</option>
+          </select>
+          <label for="descricao">Descrição do problema:</label>
+          <textarea id="descricao" required></textarea>
+          <button type="submit">Enviar Chamado</button>
+        </form>
+      </div>
+      <div id="listaChamados">
+        <!-- Chamados do cliente aparecem aqui -->
+      </div>
+    </section>
+
+    <!-- Painel do Técnico -->
+    <section id="tecnico">
+      <h2>Painel do Técnico</h2>
+      <div id="chamadosTecnico">
+        <!-- Chamados para o técnico serão listados aqui -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Timaucy Company - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script> <!-- JavaScript externo -->
+</body>
+</html>
